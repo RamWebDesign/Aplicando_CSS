@@ -1,0 +1,322 @@
+/* Todo el fondo de la pagina sera de color negro, con una
+fuente enlazada a google llamada Dancing Script**/
+body{
+    font-family:Dancing Script;
+    background-color: #02010a;
+}
+
+/* se ha creado un div que contendra el contenido de la pagina
+estara centrado con un ancho de 900px**/
+
+#contenedor{
+  display:flex;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
+/* Esta es la parte del encabezado aca llevara el titulo y tres enlaces.**/
+
+#cabecera{
+  display:flex;
+  width: 100%;
+  background-color:#5b7989;
+  border-radius: 10px 10px 0px 0px;
+}
+/*Animacion slide in con rebote */
+@keyframes
+cabecera-animacion{
+0%{
+  margin-top: 150%;
+}
+60%{
+  margin-top: -5%;
+}
+100%{
+margin-top: 0%;
+}
+}
+
+#cabecera{
+	animation-name: cabecera-animacion;
+	animation-duration: 0.4s;
+	-webkit-animation-delay:0.4s;
+	-moz-animation-delay:0.4s;
+	-o-animation-delay:0.4s;
+	animation-delay: 0.4s;
+}
+/*Titulo del sitio*/
+
+.e1{
+  width: 100%;
+}
+.titulo{
+  color:white;
+  display: inline-flex;
+  margin-left: 2%;
+}
+/*menu*/
+
+.e2{
+  display: inline-flex;
+  float: right;
+  padding-top: 3%;
+  margin-right: 3%;
+}
+
+.e2  ul{
+  list-style: none;
+  margin:0 auto;
+
+}
+
+.e2 li{
+  float: right;
+  display: inline-block;
+  margin: 10px;
+}
+.e2 a{
+  color: #fff;
+}
+/*efecto sin subrayado en pagina actual*/
+
+
+
+/**Esta es la parte que contendra una imagen en forma de banner.**/
+
+#imagen1{
+  background-color: #82c3a6;
+  width: 100%;
+}
+
+.img1{
+  width: 60%;
+  height: 50%;
+  margin-left: 20%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  box-shadow: 3px 3px;
+}
+
+/**Esta parte contiene dos imagenes adaptativas y dos enlaces a contenido del
+citio.**/
+
+#contenido2{
+  background-color: #d5c75f;
+  display: flex;
+  width: 100%;
+}
+
+figcaption a{
+  color: #000000;
+}
+/*primera imagen*/
+#imagen2{
+text-align: center;
+width: 50%;
+}
+
+.img2{
+  width: 50%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: 1px solid;
+  box-shadow: 2px 2px;
+}
+
+.img2 {
+  transition: 1s ease;
+  -moz-transition: 1s ease; /* Firefox */
+ 	-webkit-transition: 1s ease; /* Chrome - Safari */
+ 	-o-transition: 1s ease; /* Opera */
+}
+
+.img2:hover{
+  transform: rotate(10deg);
+  -moz-transform : rotate(10deg); /* Firefox */
+  	-webkit-transform : rotate(10deg); /* Chrome - Safari */
+  	-o-transform : rotate(10deg); /* Opera */
+    box-shadow: 2px 2px #82c3a6;
+}
+
+
+/*segunda imagen*/
+#imagen3{
+  text-align: center;
+  width: 50%;
+}
+
+.img3{
+  width: 50%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: 1px solid;
+  box-shadow: 2px 2px;
+}
+
+.img3{
+  transition: 1s ease;
+  -moz-transition: 1s ease; /* Firefox */
+ 	-webkit-transition: 1s ease; /* Chrome - Safari */
+ 	-o-transition: 1s ease; /* Opera */
+}
+
+.img3:hover{
+  transform: translate(20px,-5px);
+  -moz-transform : translate(20px,-5px); /* Firefox */
+  	-webkit-transform : translate(20px,-5px); /* Chrome - Safari */
+  	-o-transform : translate(20px,-5px); /* Opera */
+    box-shadow: 2px 2px #82c3a6;
+}
+
+figcaption{
+  margin-bottom: 2%;
+}
+
+/** Esta seccion contiene el pie de pagina y derechos de autor.**/
+#pie-pagina{
+  width: 100%;
+}
+#pie{
+  display:flex;
+  background-color: #c6d5c5;
+  border-radius: 0px 0px 10px 10px;
+  width: 100%;
+  flex-direction: row;
+}
+
+/*Columna de contacto*/
+
+.c1{
+width: 25%;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.c1 a{
+  color:#000000;
+}
+/*Columna de termino*/
+
+.c2{
+width: 25%;
+text-align: left;
+  margin-left: 10%;
+}
+
+/*Columna de redes sociales*/
+
+.c3{
+ width: 25%;
+ text-align: left;
+  margin-left: 10%;
+}
+
+.c4{
+  width: 25%;
+  text-align: left;
+  margin-left: 10%;
+}
+/** Logos de contacto**/
+.fb-logo{
+  width: 13%;
+}
+
+.tw-logo{
+  width: 13%;
+}
+
+.in-logo{
+  width: 13%;
+}
+/*Columna de derechos*/
+
+
+
+@media screen and (max-width:960px){
+  #contenedor{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width:680px){
+  #contenedor{
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width:480px){
+  #contenedor{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #cabecera{
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  }
+ h1{
+   text-align: center;
+ }
+ .e2{
+   width: 100%;
+   padding: 0%;
+   margin: 0 auto;
+  }
+  /** Ajuste de primera imagen**/
+#contenido1{
+  width: 100%;
+  margin: 0 auto;
+}
+
+  #imagen1{
+    width: 100%;
+    margin: 0 auto;
+  }
+  /**Ajuste de dos imagenes en dos columnas a una imagen en una columna**/
+  #contenido2{
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+ #imagen2{
+   width: 100%;
+   margin: 0 auto;
+ }
+ #imagen3{
+   width: 100%;
+   margin: 0 auto;
+ }
+
+ /**Ajuste de cuatro columnas del pie a una sola**/
+ #pie{
+   width: 100%;
+   margin:0 auto;
+   flex-direction: column;
+ }
+
+.c1{
+  width: 100%;
+  margin:10% ;
+}
+
+.c2{
+  width: 100%;
+  margin:10% ;
+}
+
+.c3{
+  width: 100%;
+  margin: 10%;
+}
+
+.c4{
+  width: 100%;
+  margin: 10%;
+}
+
+}
